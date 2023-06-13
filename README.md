@@ -1,4 +1,4 @@
-### If I offended you, im sorry. It must be a misunderstanding 😅
+### Im sorry.
 <!--
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=millennIumAMbiguity&layout=compact&hide=html" alt="millennIumAMbiguity" /><img align="center" src="https://github-readme-stats.vercel.app/api?username=millennIumAMbiguity&show_icons=true" alt="millennIumAMbiguity" /></p>
 
