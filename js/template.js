@@ -50,9 +50,9 @@ function formatRepoTemplate(repo, icon, license) {
     "</a>" +
     license +
     'Updated <time datetime="' +
-    repo.updated_at +
+    repo.pushed_at +
     '" class="no-wrap">' +
-    relativeTime(repo.updated_at) +
+    relativeTime(repo.pushed_at) +
     "</time></div></div>"
   );
 }
