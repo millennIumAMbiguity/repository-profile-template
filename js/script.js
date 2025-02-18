@@ -6,8 +6,9 @@ async function fetchRepos() {
   document.title = username;
 
   // Add title to page
-  const title = document.createElement("h1");
-  title.textContent = username;
+  const title = document.createElement("a");
+  title.setAttribute("href", "https://github.com/" + username);
+  title.innerHTML = "<h1>" + username + "</h1>";
   document.body.appendChild(title);
 
   // Add container for repos
