@@ -34,11 +34,20 @@ async function fetchRepos() {
     })
   );
 
-  // Sort by stars
-  repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+  const sortByStars = true; // Set to false to sort by date
 
-  // Sort by last updated
-  //repos = repos.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+  if (sortByStars) {
+    repos = repos.sort((a, b) => {
+      // Sort by stars, and by date if stars are equal
+      if (b.stargazers_count === a.stargazers_count) {
+        return new Date(b.pushed_at) - new Date(a.pushed_at);
+      }
+      return b.stargazers_count - a.stargazers_count;
+    });
+  } else {
+    // Sort only by date
+    repos = repos.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+  }
 
   repos.forEach((repo) => {
     // Skip forks
