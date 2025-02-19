@@ -1,15 +1,16 @@
 import { username, additionalRepos } from "./data.js";
-import { formatRepo } from "./template.js";
+import {
+  formatRepo,
+  formatTitleElement,
+  formatFooterElement,
+} from "./template.js";
 
 async function fetchRepos() {
   // Set tab title
   document.title = username;
 
   // Add title to page
-  const title = document.createElement("a");
-  title.setAttribute("href", "https://github.com/" + username);
-  title.innerHTML = "<h1>" + username + "</h1>";
-  document.body.appendChild(title);
+  document.body.appendChild(formatTitleElement());
 
   // Add container for repos
   const repoContainer = document.createElement("div");
@@ -54,8 +55,10 @@ async function fetchRepos() {
     if (repo.fork) return;
 
     // Add repo html to the container
-    repoContainer.appendChild(formatRepo(document, repo));
+    repoContainer.appendChild(formatRepo(repo));
   });
+
+  document.body.appendChild(formatFooterElement());
 }
 
 fetchRepos();

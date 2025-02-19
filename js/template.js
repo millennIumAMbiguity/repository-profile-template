@@ -1,7 +1,7 @@
-import { repoData } from "./data.js";
+import { username, repoData } from "./data.js";
 import { relativeTime } from "./relative-time.js";
 
-export function formatRepo(document, repo) {
+export function formatRepo(repo) {
   const repoElement = document.createElement("div");
   repoElement.classList.add("repo", "border-bottom");
 
@@ -55,4 +55,19 @@ function formatRepoTemplate(repo, icon, license) {
     relativeTime(repo.pushed_at) +
     "</time></div></div>"
   );
+}
+
+export function formatTitleElement() {
+  const title = document.createElement("a");
+  title.setAttribute("href", "https://github.com/" + username);
+  title.innerHTML = "<h1>" + username + "</h1>";
+  return title;
+}
+
+export function formatFooterElement() {
+  const footer = document.createElement("footer");
+  footer.classList.add("color-fg-muted");
+  footer.innerHTML =
+    'Built using <a class="Link--muted" href="https://github.com/millennIumAMbiguity/repository-profile-template">millennIumAMbiguity/repository-profile-template</a>';
+  return footer;
 }
