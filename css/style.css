@@ -13,10 +13,11 @@
 .no-wrap { white-space: nowrap !important; }
 .octicon { display: inline-block; overflow: visible !important; vertical-align: text-bottom; fill: currentColor; }
 .pr-4 { padding-right: var(--base-size-24, 24px) !important; }
-.repo { padding: 10px; margin: 10px 0; border-radius: 8px; display: flex; align-items: center; }
+.repo { padding: 10px; margin: 10px 0; border-radius: 8px; display: flex; }
 .repo a { text-decoration: none; font-weight: bold; }
 .repo img { width: 80px; height: 80px; margin-right: 15px; object-fit: cover; border-radius: 6px; }
 .repo-details { flex: 1; }
+.repo-details > .mb-1 { margin-top: -7px; }
 a { color: var(--fgColor-accent, var(--color-accent-fg)); text-decoration: none; }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; padding: 20px; color: var(--fgColor-default);	background-color: var(--bgColor-default); font-size: var(--body-font-size, 14px); line-height: 1.5; max-width: 1400px; margin: 0 auto; }
 h1 { font-family: "Mona Sans", "MonaSansFallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; font-weight: var(--base-text-weight-bold); color: var(--base-color-scale-white-0); font-size: var(--brand-text-size-800); line-height: var(--brand-text-lineHeight-800); letter-spacing: var(--brand-text-letterSpacing-800); margin-left: 4%; }
